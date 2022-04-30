@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dag Van De Week</title>
+
+    <style>
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <script>
+
+    "use strict";
+    
+    let dag = new Date();
+    let huidigeDag = dag.getDay();
+    let dagTxt;
+    
+    
+    let dagBenamingen = ["Maandag", "Dinsdag", "Woensdag", "Donderdag", "Vrijdag", "Zaterdag", "Zondag"];
+    dagTxt = dagBenamingen[huidigeDag-1]
+    console.log(huidigeDag);
+    console.log(dagTxt);
+
+    if (dagTxt == "Zaterdag" || dagTxt == "Zondag"){
+        document.write(`<p>Vandaag is het "${dagTxt}"</p>
+                        <p>Het is weekend, even bekomen.</p>`);
+    } else {
+        document.write(`<p>Vandaag is het "${dagTxt}"</p>
+                        <p>Het is een werkdag, aan de slag dus.</p>`);
+    }
+
+    </script>
+    
+</body>
+</html>
