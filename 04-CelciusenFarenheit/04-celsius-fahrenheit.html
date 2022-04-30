@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04-celsius-fahrenheit</title>
+</head>
+<body>
+    <input type="button" value="fc" id="knop_fc" onclick="berekenFc()" /><br><br>
+    <input type="button" value="cf" id="cf" onclick="berekenCf()" />
+
+
+    <script>
+
+        function berekenFc(){
+            let ingaveFc = prompt("Hoeveel graden Farenheit?");
+            let omzettingFC = ((ingaveFc - 32)*5)/9;
+            alert(`${ingaveFc} is ${omzettingFC} graden Celcius`);
+        }
+
+        function berekenCf(){
+            let ingaveCf = prompt("Hoeveel graden Celcius?");
+            let omzettingCf = (ingaveCf*9)/5 + 32;
+            alert(`${ingaveCf} is ${omzettingCf} graden Celcius`);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05-koffie-voor-het-leven</title>
+</head>
+<body>
+    
+    <input type="button" value="Verstuur" id="knop_verstuur" onclick="berekenHoeveelheid()" />
+
+    <script>
+        
+        let geboortejaar;
+        let geboorteNr;
+        let schattingLeeftijd;
+        let schattingsNr;
+        let koppenKoffie;
+        let koffieNr;
+
+        let controle = true;
+        
+        function check(){
+            
+            if(geboorteNr == null || schattingsNr == null || koffieNr == null){
+                alert("je mag niet annuleren");
+                controle = false;
+            } else if (geboorteNr == "" || schattingsNr == "" || koffieNr == ""){
+                alert("Je moet overal een waarde ingeven");
+                controle = false;
+            } else if (isNaN(geboorteNr) || isNaN(schattingsNr) || isNaN(koffieNr)){
+                alert("Je moet getallen ingeven");
+                controle = false;
+            } 
+            
+        }
+        
+        function berekenHoeveelheid(){
+            
+            geboortejaar = prompt("Wat is jouw geboortejaar?");
+            geboorteNr = parseInt(geboortejaar);
+            schattingLeeftijd = prompt("Hoe oud denk je te worden?");
+            schattingsNr = parseInt(schattingLeeftijd);
+            koppenKoffie = prompt("Hoeveel koppen koffie drink je dagelijks?");
+            koffieNr = parseInt(koppenKoffie);
+            let controle = true;
+            check();
+
+
+            if (controle == true){
+                alert("Alles is correct ingevuld");
+            }
+            
+
+        }
+
+
+    </script>
+</body>
+</html>
